@@ -1,0 +1,11 @@
+<h1>Description Data</h1>
+<a href="/">Create New Entries</a>
+<% for (let i = 0; i < data.length; i++) {%>
+    <h2><%= data[i].scientific_name %></h2>
+    <ul>
+        <li>Common Name: <%= data[i].common_name %></li>
+        <li>Description: <%= data[i].technical_description %></li>
+        <li><a href="">View Entry</a> (Doesn't work yet)</li>
+        <li><a href="/botanical?delete=<%= data[i].id %>">Delete</a></li>
+    </ul>
+<% } %>
